@@ -1,0 +1,52 @@
+<%- include("header") -%> 
+    <div class="body"> 
+     <div class="head"> 
+     <h1  > <%=varDay%> </h1> 
+    </div>
+<!-- 
+    <% if(varDay==="saturday" || varDay==="sunday"){ %>
+        <h1 style="color:blue"><%=varDay%> tod0 lst</h1>
+
+        <% } else{ %>
+        <h1 style="color:purple"><%=varDay%> tod0 lst</h1>
+        <% } %> -->
+    
+     
+        <% newListItems.forEach(function(item){ %>
+            <form action="/delete" method="POST"> 
+            <div class="list"> 
+                <div class="checkbox"> 
+            <input type="checkbox" onchange="this.form.submit()" value="<%=item._id%>" name="checkbox" autosuggestion="off">
+               </div>
+               <div class="p"> 
+            <p class="listChild"><%=  item.name %></p>
+                </div>
+            </div>
+            <input type="hidden"  value="<%=varDay%>" name="buttonList"></input>
+            </form>
+        
+    
+        <%})%>
+        <!-- <%for(var i=0 ; i<newListItems.length ; i++){ %>
+             <li class="listChild"><%= newListItems[i].name %></li>
+        <%}%> -->
+   
+    
+
+    <div class="add">
+    <form method="POST" action="/home">
+        <input type="text" placeholder="item" name="itemName">
+        <button type="submit" name="button" class="btn default" value=<%=varDay%> >add</button>
+    </form>
+    </div>
+</div>
+
+    <div class="for_redirect">
+        <form method="POST" action="/for_redirect">
+            <button type="submit" name="for_redirect_btn" class="for_redirect_btn btn default">Home</button>
+        </form>
+    </div>
+ 
+
+
+    <%- include("footer") -%>
