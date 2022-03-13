@@ -1,0 +1,48 @@
+*{
+    padding:0;
+    margin:0;
+    box-sizing: border-box;
+
+}
+body{
+    background-image:url("http://images.designtrends.com/wp-content/uploads/2015/11/06084012/Brown-Bricks-Background1.jpg");
+     
+    background-size:cover;
+    background-position:center;
+    font-family: 'Ubuntu', sans-serif;
+
+}
+.body{
+    text-align:center;
+    color:white;
+    font-family: 'Ubuntu', sans-serif;
+    font-size:2rem;
+
+    margin-top:20%;
+    margin-right:10%;
+    margin-left:10%;
+    line-height: 4rem;
+    padding:30px;
+     background-color: rgba(212, 162, 118, 0.6);
+     box-shadow:5px 5px 5px 5px #cd9777;
+     
+
+}
+ 
+input{
+    background:transparent;
+    border:none;
+    border-bottom: 2px solid;
+    font-size:1.5rem;
+    outline:none;
+
+}
+ 
+button{
+    padding:5px;
+    color:white;
+    background: black;
+    border-radius: 100%;
+    border: 2px solid;
+    font-size:1.5rem;
+}
